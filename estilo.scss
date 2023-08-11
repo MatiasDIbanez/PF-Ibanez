@@ -1,3 +1,4 @@
+
 * {
   padding: 0;
   margin: 0;
@@ -52,8 +53,9 @@ header {
   grid-template-columns: 42.5% 15% 42.5%;
   align-items: center;
   min-height: 110px;
+  
 }
-.back {
+.back{
   width: 100%;
   background-color: #073e53;
   header {
@@ -137,6 +139,7 @@ header {
       font-size: 16px;
       color: #e7e6f6;
       grid-column: 2/7;
+      align-items: center;
       span {
         font-family: titulos;
         color: #fbbe63;
@@ -144,6 +147,7 @@ header {
       .dona {
         font-size: 16px;
         color: #e7e6f6;
+        padding-top: 3px;
       }
     }
     .logoFooter {
@@ -270,46 +274,66 @@ header {
       flex-wrap: nowrap;
       overflow: scroll;
       overflow-y:hidden;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
+      height: 350px;
+      align-items: center;
       .resenias-item {
         flex: 1 0 auto;
         margin-inline: 20px;
-        background-image: linear-gradient(to bottom,#073e53 30%,#e7e6f6);
+        background-color: #e7e6f6;
         box-shadow: 5px 5px 8px #073e53;
-        width: 250px;
-        height: 350px;
+        width: 270px;
+        height: 270px;
         border-radius: 10px;
+        display: grid;
+        align-content: center;
+
         .tex{
-          background-color: #e7e6f6;
-          height: 70%;
+          height:100%;
           width: 100%;
-          font-family: productos;
-          font-size: 22px;
-          text-align: center;
-          padding-inline:10px;
-          padding-block:auto;
-          border-top: 20px;
-          overflow: auto;
-        }
-
-        .pic{
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          margin-inline: auto;
-          margin-top: 8px;
-          object-fit:contain;
-
-        }
-        p{
           font-family: textos;
           font-size: 20px;
           text-align: center;
-          padding-block: 10px;
+          padding-top: 10px;
+          padding-inline:10px;
+          margin-inline: auto;
+          border-top: 20px;
+          overflow:scroll;
+        }
+          .info{
+            height: 60px;
+            display: flex;
+            justify-self:center;
+            
+            .pic{
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              margin-inline: auto;
+              margin-top: 8px;
+              object-fit:contain;
+            }
+            p{
+              font-family: textos;
+              font-size: 20px;
+              text-align: center;
+              padding: 8px;
+            }
         }
       }
+      .resenias-item:hover {
+        scale: 1.1;
+        transition: 0.5s;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 768px){
+      margin-bottom: 10px;
+      margin-inline: 10px;
+      .resenias-item:hover {
+        scale: 1.05;
+        transition: 1s;}
     }
   }
+}
 }
 /* Fin home */
 /* Nosotros */
@@ -560,6 +584,66 @@ header {
 .productos {
   max-width: 1200px;
   margin-inline: auto;
+  .carrito-menu{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    width: 35%;
+    margin-inline: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: auto;
+    background-color: #073d53d3;
+    height: auto;
+    position: sticky!important;
+    top: 0;
+    // margin-right: -100%;
+    // opacity: 0;
+    .encabezadoCarrito{
+      display: grid;
+      height: 50px;
+      margin-block: auto;
+      width: 100%;
+      grid-row: 1;
+      grid-column: 1/4;
+      justify-content: space-around;
+      align-items: center;
+      svg{
+        grid-column: 1/2;
+      }
+      #suPedido{
+        grid-column:2/4 ;
+        grid-row: 1;
+      }
+    }
+    
+    #carritoBar{
+      display: grid;
+      grid-row: auto;
+      grid-column: 1/4;
+      background-color:#e7e6f6af;
+      width: 100%;
+      .itemCarrito{
+        display: grid;
+      .productosCarrito{
+        padding-inline: 10px;
+        padding-bottom: 1px;
+        width: 100%;
+        grid-column: 1/2;
+      }
+      .info{
+        width: 30%;
+        grid-column: 3/4;
+      }
+      .btn-eliminar{
+        grid-column: 4/5;
+        align-self: center;
+      }
+    }
+    }
+  }
   .producto-menu {
     margin: 10px;
     max-width: 850px;
@@ -609,23 +693,59 @@ header {
       height: 238px;
       box-shadow: 5px 5px 8px #073e53;
       position: relative;
+      display: grid;
+      grid-template-rows: 4;
+      grid-template-columns: repeat (2,1fr);
       p {
         width: auto;
-        color: #220c10;
+        grid-row: 1;
+        grid-column: 1/3;
+        color: #000000;
         font-family: titulos;
         text-shadow: 1px 1px 2px #e7e6f6;
         font-size: 28px;
-        padding-top: 35px;
+        padding-top: 25px;
         text-align: center;
         align-self: center;
       }
       .descripcion {
+        grid-column: 1/3;
+        grid-row: 2/3;
         color: #220c10;
         opacity: 0;
       }
+      .cantidad{
+        width: 100%;
+        margin-inline: auto;
+        display: flex;
+        background-color: #08678c;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        grid-row: 3/4;
+        grid-column: 1;
+        .carrito-item-cantidad{
+          background-color: #e7e6f6;
+          width: 30%;
+          .totalProduc{
+          padding-top: 0;
+          margin-bottom: 0;
+          font-size:medium;
+          color:#000000;
+          }
+        }
+      }
+      .agregar{
+        border: 0;
+        width: 100%;
+        background-color: #fbbe63;
+        margin-inline: auto;
+        grid-row: 3/4;
+      }
+      
     }
     .item-producto:hover {
-      filter: grayscale(0.4);
+
       scale: 1.05;
       .descripcion {
         padding: 6px;
@@ -637,6 +757,7 @@ header {
         opacity: 1;
         transition: 0.5s;
       }
+
     }
   }
 }
@@ -833,7 +954,6 @@ header {
     margin: auto;
     padding: 10px;
     text-align: start;
-    font-style: italic;
     grid-area: contacto;
     text-align: center;
     font-size: 18px;
@@ -861,7 +981,16 @@ header {
       background-color: #fbbe63;
     }
   }
+  .contacto *:focus{
+    background-color: #08678c67;
+    transition: 0.5s;
+  }
+  .contacto *:invalid{
+    background-color: #e91f1f9c;
+  }
+  
 }
+
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .encabezado-contacto {
     h1 {
@@ -966,3 +1095,4 @@ header {
     transition: all 300ms ease;
   }
 }
+

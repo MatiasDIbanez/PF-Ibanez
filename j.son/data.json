@@ -1,0 +1,191 @@
+[
+    {
+       "categoria":"Clasica",
+       "identificador":"CS",
+       "nombre":"Carne suave",
+        "stock":100,
+        "precio":240
+    },
+    {
+        "categoria":"Clasica",
+        "identificador":"CP",
+        "nombre":"Carne picante",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Clasica",
+        "identificador":"CP",
+        "nombre":"Carne picante",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Clasica",
+        "identificador":"CP",
+        "nombre":"Carne picante",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Clasica",
+        "identificador":"PO",
+        "nombre":"Pollo",
+         "stock":100,
+         "precio":240
+     },     
+     {
+        "categoria":"Clasica",
+        "identificador":"PB",
+        "nombre":"Pollo con salsa blanca",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Clasica",
+        "identificador":"RJ",
+        "nombre":"Roquefort con jamón",
+         "stock":100,
+         "precio":240
+     },     
+     {
+        "categoria":"Clasica",
+        "identificador":"JQ",
+        "nombre":"Jamón y queso",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Vegetariana",
+        "identificador":"CA",
+        "nombre":"Caprese",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Vegetariana",
+        "identificador":"QC",
+        "nombre":"Queso y cebolla",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Vegetariana",
+        "identificador":"HU",
+        "nombre":"Humita",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Vegetariana",
+        "identificador":"CB",
+        "nombre":"Calabaza",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Vegetariana",
+        "identificador":"VE",
+        "nombre":"Verdura",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Especial",
+        "identificador":"DI",
+        "nombre":"Diabla",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Especial",
+        "identificador":"4Q",
+        "nombre":"Cuatro queso",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Especial",
+        "identificador":"CH",
+        "nombre":"Cheese burger",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Vegana",
+        "identificador":"NP",
+        "nombre":"No pollo",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Vegana",
+        "identificador":"CV",
+        "nombre":"Caprese vegana",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Vegana",
+        "identificador":"AG",
+        "nombre":"Agridulce",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Vegana",
+        "identificador":"NM",
+        "nombre":"New mix",
+         "stock":100,
+         "precio":260
+     },
+     {
+        "categoria":"Dulce",
+        "identificador":"DM",
+        "nombre":"Membrillo",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Dulce",
+        "identificador":"DB",
+        "nombre":"Batata",
+         "stock":100,
+         "precio":240
+     },
+     {
+        "categoria":"Postre",
+        "identificador":"CHOCO",
+        "nombre":"Chocotorta",
+         "stock":100,
+         "precio":800
+     },
+     {
+        "categoria":"Postre",
+        "identificador":"BOMB",
+        "nombre":"Bomba oreo",
+         "stock":100,
+         "precio":800
+     },
+     {
+        "categoria":"Postre",
+        "identificador":"BOMB",
+        "nombre":"Bomba oreo",
+         "stock":100,
+         "precio":800
+     },
+     {
+        "categoria":"Postre",
+        "identificador":"BROW",
+        "nombre":"Brownie explotado",
+         "stock":100,
+         "precio":800
+     },
+     {
+        "categoria":"Postre",
+        "identificador":"VEGAN",
+        "nombre":"Vegano",
+         "stock":100,
+         "precio":800
+     }    
+]
