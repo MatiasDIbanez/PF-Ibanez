@@ -39,7 +39,7 @@ function agregarCarrito(event) {
     }
   }
   carrito.push(productoElegido);
-  if(list){sumarProductoAlCarritoMenu(productoElegido.nombre,cantidadValorElemento);}
+  if(list){sumarProductoAlCarritoMenu(productoElegido.nombre,cantidadValorElemento,productoElegido.precio);}
 }
 
 function buscoProducto(ID) {
@@ -50,20 +50,23 @@ function buscoProducto(ID) {
   }
 }
 //Funcion para el DOM de carrito
-function sumarProductoAlCarritoMenu(nombre,cantidad) {
+function sumarProductoAlCarritoMenu(nombre,cantidad,precio) {
   //Traemos a el div del carrito
   let carritoMenu = document.getElementById("carritoBar");
   //Agregamos el producto al carrito
   let itemCarritoContenido=document.createElement("div")
+  //Total 
+  let precioTotal=cantidad*precio
  //Definimos el innerHTML del elemento con una plantilla de texto
   itemCarritoContenido.innerHTML = `
-  <div class="productosCarrito">
+  <div class="itemCarrito" class="enunciadosCarrito">
     <div class="productosCarrito">${nombre}</div>
+    <div class="info">${cantidad}</div> 
+    <div class="precio">$${precioTotal}</div> 
+    <button class="btn-eliminar">
+      <i class="fa fa-trash"></i>
+    </button>
   </div>
-  <div class="info">${cantidad}</div>
-  <button class="btn-eliminar">
-  <i class="fa fa-trash"></i>
-  </button>
   `;
   //Agregamos al contenedor del carrito
   itemCarritoContenido.className="itemCarrito"
@@ -112,7 +115,7 @@ for (const boton of botonEliminar){
   let buttonClicked = event.target;
   console.log(buttonClicked.id)
   buttonClicked.parentElement.parentElement.remove()
-  console.log(carrito.pop())
+  carrito.pop()
    }
 //Funcion filtrado
 // function FilterCategoria(categoria){
